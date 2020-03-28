@@ -6,6 +6,16 @@ var defaultpassword="Demo1234@";
 var defaultName="Demo";
 var AccountValid=false;
 
+
+var ourRequest= new XMLHttpRequest();
+ourRequest.open('GET','https://raw.githubusercontent.com/fjc505026/web_dev_502/master/JSON/testdata.json');
+ourRequest.onload=function(){
+  var ourData= JSON.parse(ourRequest.responseText);  //our data is an array now
+};
+
+ourRequest.send();
+
+
 $(document).ready(function() {
 
   $("#MyTimetable_hylink").on('click',function () {
