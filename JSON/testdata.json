@@ -1,0 +1,20 @@
+[
+   {
+     "name":"Jingchen Fan",
+     "gender": "male",
+     "food":{
+        "like":["tuna","catnip"],
+        "dislike":["ham", "zuchhini"]
+     }
+    },
+
+   {
+    "name":"Jingchen Fan1",
+    "gender": "male",
+    "food":{
+       "like":["tuna","catnip"],
+       "dislike":["ham", "zuchhini"]
+    }
+   }
+
+]
