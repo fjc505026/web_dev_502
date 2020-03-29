@@ -33,7 +33,7 @@ var Demo_UserInfo={
      enroll_unit1:{
          Code:null,
          Tutoral:null,
-         Tutoral_allocate:1
+         Tutoral_allocate:0
 
      },
      enroll_unit2:{

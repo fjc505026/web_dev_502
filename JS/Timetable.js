@@ -1,4 +1,25 @@
 
+
+
+$(function(){
+
+  $.ajax({
+    type:'GET',
+    dataType: 'json',
+    url:'https://raw.githubusercontent.com/fjc505026/web_dev_502/master/JSON/testdata.json',
+    success:function(data){ 
+
+
+
+      
+    }
+  });
+
+
+
+
+
+
 var AddTut="<td><a class=\"btn btn-success text-white\" href=\"TutAllocation.html\" >allocate</a></td>";
 var DeleTut="<td><a class=\"btn btn-danger text-white\" href=\"#\" >remove</a></td>";
 
