@@ -9,7 +9,31 @@ function validateFunc() {
     if(Bool_submit){
         alert("The form was submitted");
         Bool_submit=false;
-    }    
+        var userinfo={
+           firstName:$("#first_name").val(),
+           lastName:$("#last_name").val(),
+           staffID:$("#staff_id").val(),
+           phoneNo:$("#phone_No").val(),
+           email:$("#email").val(),
+           qualification:$("#qualification").val(),
+           expertise:$("#expertise").val(),
+           password:$("#psw2").val(),
+        };
+
+        $.ajax({
+        type:'POST',
+        url:'../JSON/user.json',//https://raw.githubusercontent.com/fjc505026/web_dev_502/master/JSON/user.JSON'
+        data:  userinfo,
+        dataType: 'json',
+        done: done ,
+        // sucess: function(newUser){
+        //     alert("submit account info success!");
+        // },
+        // error:function(){
+        //     alert("submit account info error!");
+        // }
+        });
+        }    
 }
 
 $().ready(function() {
@@ -38,3 +62,4 @@ $().ready(function() {
     })
 
 })
+
