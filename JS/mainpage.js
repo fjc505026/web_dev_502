@@ -18,11 +18,14 @@ ourRequest.send();
 
 $(document).ready(function() {
 
-  $("#MyTimetable_hylink").on('click',function () {
-    if(AccountValid)
-        $("#MyTimetable_hylink").attr("href","Timetable.html");
+  $(".priority").on('click',function () {
+    if(AccountValid){
+      $("#MyTimetable_hylink").attr("href","html/Timetable.html");
+      $("#MasterStaff_hylink").attr("href","html/MasterStaff.html");
+      $("#MasterUnit_hylink").attr("href","html/MasterUnits.html");
+    }
     else
-      alert("please log in your account")    
+      alert("please log in your account!")    
   });
 
   $("#SignIn_btn").click(function(){
