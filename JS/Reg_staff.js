@@ -19,9 +19,11 @@ function validateFunc() {
            expertise:$("#expertise").val(),
            password:$("#psw2").val(),
         };
+        var sample="111";
+
 
         $.ajax({
-        type:'POST',
+        type:'post',
         url:'../JSON/user.json',//https://raw.githubusercontent.com/fjc505026/web_dev_502/master/JSON/user.JSON'
         data:  userinfo,
         dataType: 'json',

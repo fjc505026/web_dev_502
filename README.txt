@@ -1,4 +1,5 @@
-1. Timetable only avaliable when log in, you can access in Home page click "log in", it automatically creates a valid email and password. 
+1. Timetable only avaliable when log in, you can access in Home page click "log in", it automatically creates a valid email and password.
+ 
 
 
 

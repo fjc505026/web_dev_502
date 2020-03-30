@@ -1,7 +1,7 @@
 
 .big-banner {
   color: white;
-  background-image: url(/jfan6/images/library-1.jpg);
+  background-image: url(../images/library-1.jpg);
   padding-top: 15%;
   padding-bottom: 15%;
   background-repeat: repeat;
@@ -13,7 +13,7 @@
 
 #big-banner1 {
   color: white;
-  background-image: url(/jfan6/images/bg2.jpg); 
+  background-image: url(../images/bg2.jpg); 
   width:1920px;
   height:1080px;
   margin: auto;
@@ -25,7 +25,7 @@
   width:1920px;
   height:1080px;
   margin: auto;
-  background-image: url(/jfan6/images/bg1.jpg);
+  background-image: url(../images/bg1.jpg);
   background-repeat: repeat;
   text-align: center;
   z-index: 0;

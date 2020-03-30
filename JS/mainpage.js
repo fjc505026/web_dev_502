@@ -7,19 +7,21 @@ var defaultName="Demo";
 var AccountValid=false;
 
 
-var ourRequest= new XMLHttpRequest();
-ourRequest.open('GET','https://raw.githubusercontent.com/fjc505026/web_dev_502/master/JSON/testdata.json');
-ourRequest.onload=function(){
-  var ourData= JSON.parse(ourRequest.responseText);  //our data is an array now
-};
+// var ourRequest= new XMLHttpRequest();
+// ourRequest.open('GET','https://raw.githubusercontent.com/fjc505026/web_dev_502/master/JSON/testdata.json');
+// ourRequest.onload=function(){
+//   var ourData= JSON.parse(ourRequest.responseText);  //our data is an array now
+// };
 
-ourRequest.send();
+// ourRequest.send();
 
 
 $(document).ready(function() {
 
+
   $(".priority").on('click',function () {
-    if(AccountValid){
+    AccountValid=true;  //for debug
+    if(AccountValid){ 
       $("#MyTimetable_hylink").attr("href","html/Timetable.html");
       $("#MasterStaff_hylink").attr("href","html/MasterStaff.html");
       $("#MasterUnit_hylink").attr("href","html/MasterUnits.html");
