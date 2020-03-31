@@ -1,0 +1,28 @@
+[
+    {
+        "Code":"kit501",
+        "Name": "ICT fundamental technology",
+        "Coordinator":"Tony Grey",
+        "Lecuter": "Jack simith",
+        "Day"     :"Monday",
+        "Start"   :"11:00",
+        "End"     :"13:00",
+         "Tutorial1":{
+            "Day":"Monday",
+            "Start":"8:00",
+            "End":"12:00",
+            "location":"Nth.7",
+            "current":"10",
+            "max":"20"
+         },
+         "Tutorial2":{
+            "Day":"Tuesday",
+            "Start":"11:00",
+            "End":"12:00",
+            "location":"Sth.16",
+            "current":"17",
+            "max":"20"
+         }
+       },
+
+

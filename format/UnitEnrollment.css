@@ -3,7 +3,10 @@
 }
 
 #filterGroup{
-    margin-left: 10%;
+    margin-left: 20%;
     margin-top: 2%;
+}
 
+#filterGroup>div{
+    margin-left: 5%;
 }
