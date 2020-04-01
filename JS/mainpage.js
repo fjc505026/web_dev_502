@@ -7,18 +7,8 @@ var defaultName="Demo";
 var AccountValid=false;
 
 
-// var ourRequest= new XMLHttpRequest();
-// ourRequest.open('GET','https://raw.githubusercontent.com/fjc505026/web_dev_502/master/JSON/testdata.json');
-// ourRequest.onload=function(){
-//   var ourData= JSON.parse(ourRequest.responseText);  //our data is an array now
-// };
-
-// ourRequest.send();
-
-
 $(document).ready(function() {
-
-
+  //check the account log in for timetable stafflist unitmaster access
   $(".priority").on('click',function () {
     AccountValid=true;  //for debug
     if(AccountValid){ 
@@ -29,7 +19,7 @@ $(document).ready(function() {
     else
       alert("please log in your account!")    
   });
-
+  //for log in window, chech the user account validation
   $("#SignIn_btn").click(function(){
     if(!(mailformat.test($("#email0").val())))
         alert("invalid email address");
@@ -47,7 +37,7 @@ $(document).ready(function() {
         alert("In valid email and password!");
   });
 
-
+  //for log out use
   $("#lg_outCfm_btn").click(function(){
         AccountValid=false;
         $("#Logged_banner").text("");

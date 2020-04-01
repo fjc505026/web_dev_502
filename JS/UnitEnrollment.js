@@ -1,11 +1,12 @@
-var AddTut="<td><a class=\"btn btn-success text-white\" href=\"TutAllocation.html\" >enroll</a></td>";
-var DeleTut="<td><a class=\"btn btn-danger text-white\" href=\"#\" >remove</a></td>";
+var AddTut="<td><a class=\"btn btn-success  text-white\"  href=\"#.html\" >enroll</a></td>";
+var DeleTut="<td><a class=\"btn btn-danger  text-white\" href=\"#\" >remove</a></td>";
 
 var val_campus=0;
 var val_Period=0;
 
 //window.setTimeout("window.location='/phpProject/Timetable.php'", 0);
 $(function(){
+    //initial load
     $.ajax({
       type:'GET',
       dataType: 'json',
@@ -16,10 +17,11 @@ $(function(){
             {
                 $("#UnitEnrol_body").append("<tr><td>"+unit.Code +"</td><td>"+unit.Coordinator +"</td><td>"+unit.Lecuter+"</td><td>"+unit.Description+"</td><td>"+unit.Campus+"</td><td>"+unit.Period+"</td>"+AddTut+"</tr>");
             }
-        })
+        });
+        btn_act(); //need to improve
       }
     });
-
+    //campus filter reload
     $("#campus").click(function(){
         val_campus=$("#campus").val(); 
         var name_campus;
@@ -35,17 +37,17 @@ $(function(){
             dataType: 'json',
             url:'../JSON/testdata.json',
             success:function(data){
-                $.each(data, function(i,unit){
+              $.each(data, function(i,unit){
                 if (name_campus=="All")
                    $("#UnitEnrol_body").append("<tr><td>"+unit.Code +"</td><td>"+unit.Coordinator +"</td><td>"+unit.Lecuter+"</td><td>"+unit.Description+"</td><td>"+unit.Campus+"</td><td>"+unit.Period+"</td>"+AddTut+"</tr>");
                 else if(unit.Campus==name_campus)
                     $("#UnitEnrol_body").append("<tr><td>"+unit.Code +"</td><td>"+unit.Coordinator +"</td><td>"+unit.Lecuter+"</td><td>"+unit.Description+"</td><td>"+unit.Campus+"</td><td>"+unit.Period+"</td>"+AddTut+"</tr>");
-              })
+              });
             }
           });
         }
     );
-
+    //Period filter reload
     $("#studyPeriod").click(function(){
         val_Period=$("#studyPeriod").val(); 
         var name_Periods;
@@ -74,3 +76,15 @@ $(function(){
     );
 });
 
+function btn_act(){
+    $(".en_btn").click(function(){
+        $(this).hide();
+        $(".wd_btn").show()
+    });
+
+    $(".wd_btn").click(function(){
+      $(this).hide();
+      $(".en_btn").show()
+    });
+
+}
