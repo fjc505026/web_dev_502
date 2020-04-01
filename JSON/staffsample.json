@@ -1,18 +1,52 @@
 [
   {
-     "Name": "Tony Grey",
-     "expertise": "IT 1",
+      "Name": "Tony Grey",
+      "qualification": "phd",
+      "expertise": "IT 1",
+      "preferDay":"Mon,Tue,Wed",
+      "consult_time":"MON  15:00-17:00",
+      "tutorial":{
+      "tutorial1": "pattern",
+      "tutorial2": "pattern"
 
+      }
+  },
+  {
+    "Name": "jhon",
+    "qualification": "phd",
+    "expertise": "IT 1",
+    "preferDay":"Mon,Tue,Wed",
+    "consult_time":"MON  15:00-17:00",
+    "tutorial":{
+      "tutorial1": "pattern",
+      "tutorial2": "pattern"
 
+    }
+  },
+  {
+    "Name": "harry dooley",
+    "qualification": "professor",
+    "expertise": "IT 1",
+    "preferDay":"Mon,Tue,Wed",
+    "consult_time":"MON  15:00-17:00",
+    "tutorial":{
+      "tutorial1": "pattern",
+      "tutorial2": "pattern"
 
+    }
+  },
+  {
+    "Name": "Jack green",
+    "qualification": "phd",
+    "expertise": "IT 1",
+    "preferDay":"Mon,Tue,Wed",
+    "consult_time":"MON  15:00-17:00",
+    "tutorial":{
+      "tutorial1": "pattern",
+      "tutorial2": "pattern"
 
-
-
+    }
   }
-
-
-
-
 
 
 

@@ -11,10 +11,9 @@
   </head>
 
 <body class="bg-dark">
-    <!-- Navigation -->
      <!-- Navigation -->
      <nav class="navbar navbar-expand-sm  bg-danger navbar-dark">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="../index.html">
           <img src="../images/logo.png" alt="logo">          
       </a>
       <ul class="navbar-nav">
@@ -24,17 +23,16 @@
           <li class="nav-item">
               <div class="dropdown">
                   <div class="nav-link dropdown-toggle" data-toggle="dropdown">
-                   <b>Unit</b> 
+                      <b>Unit</b> 
                   </div>
                   <div class="dropdown-menu dropdown-menu-left bg-danger text-white">
-                    <a class="dropdown-item nav-link" href="UnitEnrollment.html"><b>Unit Enrolment</b></a>
-                    <a class="dropdown-item nav-link" href="UnitDetail.html"><b>Unit Handbook(Detail)</b></a>
-                    <a class="dropdown-item nav-link" href="UnitMagmnt.html"><b>Unit Management</b></a>
+                      <a class="dropdown-item nav-link" href="UnitDetail.html"><b>Unit Detail (Handbook)</b></a>
+                      <a class="dropdown-item nav-link" href="UnitEnrollment.html"><b>Unit Enrolment</b></a>
                   </div>
-                </div>
+                  </div>
           </li>
           <li class="nav-item">
-              <a class="nav-link " id="MyTimetable_hylink" href="#"><b>MyTimetable</b></a>
+              <a class="nav-link " id="MyTimetable_hylink" href="Timetable.html"><b>MyTimetable</b></a>
           </li>
           <li class="nav-item">
               <a class="nav-link" href="MasterStaff.html"><b>Staff</b></a>
@@ -44,187 +42,173 @@
           </li>
       </ul>
       <div id="div1">
-          <b><label id="Logged_banner" class="text-light"></label></b>
-          <button  id="lg_btn" type="button" class="btn btn-success" data-toggle="modal" data-target="#log_modal"><b>Log in</b></button>
-          <button  id="lg_out" type="button" class="btn text-light btn-warning" data-toggle="modal" data-target="#logout_modal" ><b>Log out</b></button>
-          <button  id="rg_btn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#roleSelect"><b>Register</b></button>
+          <b><label id="Logged_banner afterLog" class="text-light"></label></b>
+          <button  id="lg_btn" type="button" class="btn btn-success beforeLog" data-toggle="modal" data-target="#log_modal"><b>Log in</b></button>
+          <button  id="lg_out" type="button" class="btn text-light btn-warning afterLog" data-toggle="modal" data-target="#logout_modal" ><b>Log out</b></button>
+          <button  id="rg_btn" type="button" class="btn btn-primary beforeLog" data-toggle="modal" data-target="#roleSelect"><b>Register</b></button>
       </div>
   </nav><br><br>
-    <!-- Staff list  -->
-    <div class="container_fluid" id="Staff_ct">
+      <!-- Staff list  -->
+      <div class="container_fluid " id="Staff_ct">
         <h2 class="text-muted">Staff list</h2>          
         <table class="table table-hover bg-secondary" id="Staff_tb">
           <thead>
             <tr>
               <th>Name</th>
-              <th>qualification</th>
-              <th>expertise</th>
-              <th>preferred days of teaching</th>
-              <th>consultation hours</th>
-              <th id="tut_col">Tutorial allocation</th>
+              <th>Qualification</th>
+              <th>Expertise</th>
+              <th>Preferred days of teaching</th>
+              <th>Consultation hours</th>
+              <th>Current teaching units</th>
+              <th id="tut_col">Allocation</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody  id="Staff_body" >
             <tr>
-              <td>Doe</td>
-              <td>Doe</td>
-              <td>john,harry</td>
-              <td>Description pattern Description  </td>
-              <td>Pandora(S1),Rivendell</td>
-              <td>
-                <div class="row">
-                    <div class="col">
-                    <select class="custom-select " id="campus">
-                        <option selected>Choose campus</option>
-                        <option value="1">Pandora</option>
-                        <option value="2">Rivendell</option>
-                        <option value="3">Neverland</option>
-                    </select>
-                     </div>
-                     <div class="col">
-                    <select class="custom-select " id="studyPeriod">
-                        <option selected>Choose Semester</option>
-                        <option value="1">Semester 1</option>
-                        <option value="2">Semester 2</option>
-                        <option value="3">Winter School</option>
-                        <option value="3">Spring School</option>
-                    </select>
-                    </div>
-                    <div class="col">
-                    <button class="btn btn-warning">Allocate</button>
-                    </div>
-                </div>      
-              </td>
-            </tr>
-            <tr>
-              <td>john</td>
-              <td>Moe</td>
-              <td>mary,pattern</td>
-              <td>Description pattern Description  </td>
-              <td>Pandora(S1),Rivendell</td>
-              <td>
-                <div class="row">
-                    <div class="col">
-                    <select class="custom-select " id="campus">
-                        <option selected>Choose campus</option>
-                        <option value="1">Pandora</option>
-                        <option value="2">Rivendell</option>
-                        <option value="3">Neverland</option>
-                    </select>
-                     </div>
-                     <div class="col">
-                    <select class="custom-select " id="studyPeriod">
-                        <option selected>Choose Semester</option>
-                        <option value="1">Semester 1</option>
-                        <option value="2">Semester 2</option>
-                        <option value="3">Winter School</option>
-                        <option value="3">Spring School</option>
-                    </select>
-                    </div>
-                    <div class="col">
-                    <button class="btn btn-warning">Allocate</button>
-                    </div>
-                </div>      
-              </td>
-            </tr>
-            <tr>
-              <td>mary</td>
+              <td>Jack</td>
               <td>Dooley</td>
-              <td>pattern,pattern</td>
-              <td>Description pattern Description </td>
-              <td>Pandora(S1),Rivendell</td>
+              <td>This is for</td>
+              <td>HTML fomat  </td>
+              <td>infomation demo</td>
+              <td>kit501(Lecture),kit606(Tutorial)</td>
               <td>
-                <div class="row">
-                    <div class="col">
-                    <select class="custom-select " id="campus">
-                        <option selected>Choose campus</option>
-                        <option value="1">Pandora</option>
-                        <option value="2">Rivendell</option>
-                        <option value="3">Neverland</option>
-                    </select>
-                     </div>
-                     <div class="col">
-                    <select class="custom-select " id="studyPeriod">
-                        <option selected>Choose Semester</option>
-                        <option value="1">Semester 1</option>
-                        <option value="2">Semester 2</option>
-                        <option value="3">Winter School</option>
-                        <option value="3">Spring School</option>
-                    </select>
-                    </div>
-                    <div class="col">
-                    <button class="btn btn-warning">Allocate</button>
-                    </div>
-                </div>      
-              </td>
-            </tr>
-            <tr>
-                <td>harry</td>
-                <td>Dooley</td>
-                <td>pattern,pattern</td>
-                <td>Description pattern Description  </td>
-                <td>Pandora(S1),Rivendell</td>
-                <td>
-                    <div class="row">
-                        <div class="col">
-                        <select class="custom-select " id="campus">
-                            <option selected>Choose campus</option>
-                            <option value="1">Pandora</option>
-                            <option value="2">Rivendell</option>
-                            <option value="3">Neverland</option>
-                        </select>
-                         </div>
-                         <div class="col">
-                        <select class="custom-select " id="studyPeriod">
-                            <option selected>Choose Semester</option>
-                            <option value="1">Semester 1</option>
-                            <option value="2">Semester 2</option>
-                            <option value="3">Winter School</option>
-                            <option value="3">Spring School</option>
-                        </select>
-                        </div>
-                        <div class="col">
-                            <button class="btn btn-warning">Allocate</button>
-                        </div>
-                    </div>      
-                  </td>
-            </tr>
-            <tr>
-            <td>Jack</td>
-            <td>Dooley</td>
-            <td>pattern,pattern</td>
-            <td>Description pattern Description  </td>
-            <td>Pandora(S1),Rivendell</td>
-            <td>
-                <div class="row">
-                    <div class="col">
-                    <select class="custom-select " id="campus">
-                        <option selected>Choose campus</option>
-                        <option value="1">Pandora</option>
-                        <option value="2">Rivendell</option>
-                        <option value="3">Neverland</option>
-                    </select>
-                     </div>
-                     <div class="col">
-                    <select class="custom-select " id="studyPeriod">
-                        <option selected>Choose Semester</option>
-                        <option value="1">Semester 1</option>
-                        <option value="2">Semester 2</option>
-                        <option value="3">Winter School</option>
-                        <option value="3">Spring School</option>
-                    </select>
-                    </div>
-                    <div class="col">
-                    <button class="btn btn-warning">Allocate</button>
-                    </div>
-                    <div class="col">
-                        <button class="btn btn-danger">Remove</button>
-                    </div>
-                </div>      
+                  <div class="row">
+                      <button class="btn btn-warning btn_alloc" data-toggle="modal" data-target="#alloc_modal">Allocate</button>
+                      <button class="btn btn-danger" data-toggle="modal" data-target="#remv_modal">Remove</button>
+                  </div>     
               </td>
             </tr>
           </tbody>
         </table>
+      </div>
+      <!-- Modal for staff allcoat-->
+      <div class="modal fade" id="alloc_modal" tabindex="-1" role="dialog" aria-labelledby="RegModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title text-muted">Allocation Details</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form name="UnitAlloc_form" action=""  onsubmit="">
+                        <div class="form-group">
+                          <table  class="table secondary">
+                            <thead>
+                              <tr>
+                                <th><label for="UnitCode">UnitCode: </label></th>
+                                <th><label for="campus">campus: </label></th>
+                                <th><label for="studyPeriod">Semester: </label></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <select class="custom-select " id="UnitCode">
+                                    <option selected>Choose Unit</option>
+                                    <option value="1">kit501</option>
+                                    <option value="2">kit502</option>
+                                    <option value="3">kit503</option>
+                                  </select>
+                                </td>
+                                <td>
+                                  <select class="custom-select " id="campus">
+                                    <option selected>Choose campus</option>
+                                    <option value="1">Pandora</option>
+                                    <option value="2">Rivendell</option>
+                                    <option value="3">Neverland</option>
+                                  </select>
+                                </td>
+                                <td>
+                                  <select class="custom-select " id="studyPeriod">
+                                    <option selected>Choose Semester</option>
+                                    <option value="1">Semester 1</option>
+                                    <option value="2">Semester 2</option>
+                                    <option value="3">Winter School</option>
+                                    <option value="3">Spring School</option>
+                                  </select>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                    </form>
+                    <div class="row">
+                      <p class="col-sm"><b>Category</b></p>
+                      <label class="form-check form-check-label col-sm">
+                        <input type="radio" class="form-check-input" name="lecORtut">Lecture
+                      </label>
+                      <label class="form-check form-check-label col-sm">
+                        <input type="radio" class="form-check-input" name="lecORtut">Tutorial
+                      </label>
+                    </div>
+                    <label for="timeAlloc"><b>Select time slot:</b></label>
+                    <select class="custom-select " id="timeAlloc">
+                      <option selected>Choose Time_slot</option>
+                      <option value="1">Mon 9:00-11:00</option>
+                      <option value="2">Tue 8:00-9:00</option>
+                      <option value="3">Thur 13:00-14:00</option>
+                      <option value="3">Fri 15:00-16:00</option>
+                    </select>
+               </div>
+               <div class="modal-footer">
+                <button type="submit" id="SignIn_btn" class="btn btn-success" data-dismiss="modal">Comfirm</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+               </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal for staff reomve-->
+      <div class="modal fade" id="remv_modal" tabindex="-1" role="dialog" aria-labelledby="RegModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title text-muted">Current Allocation</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form name="UnitAlloc_form" action=""  onsubmit="">
+                        <div class="form-group">
+                          <table  class="table secondary">
+                            <thead>
+                              <tr>
+                                <th><label for="UnitCode"></label># </label></th>
+                                <th><label for="Category">Category</label></th>
+                                <th><label for="UnitCode">UnitCode</label></th>
+                                <th><label for="studyPeriod">Time Slot</label></th>
+                                <th><label for="Location">Location</label></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td> <input type="checkbox"> </td>
+                                <td>Lecture </td>
+                                <td>kit501 </td>
+                                <td>Mon 9:00-11:00 </td>
+                                <td>Pandora </td>
+                              </tr>
+                              <tr>
+                                <td> <input type="checkbox"> </td>
+                                <td>Tutorial </td>
+                                <td>kit606 </td>
+                                <td>Fri 13:00-14:00 </td>
+                                <td>Pandora </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                    </form>
+               </div>
+               <div class="modal-footer">
+                <button type="submit" id="SignIn_btn" class="btn btn-danger" data-dismiss="modal">Comfirm</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+               </div>
+          </div>
+        </div>
       </div>
 </body>
 
@@ -233,5 +217,5 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="../JS/Reg_staff.js"></script>
+<script type="text/javascript" src="../JS/MasterStaff.js"></script>
 </html>

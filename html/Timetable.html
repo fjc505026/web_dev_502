@@ -11,8 +11,8 @@
   </head>
 
 <body class="bg-dark">
-     <!-- Navigation -->
-     <nav class="navbar navbar-expand-sm  bg-danger navbar-dark">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-sm  bg-danger navbar-dark">
         <a class="navbar-brand" href="../index.html">
             <img src="../images/logo.png" alt="logo">          
         </a>
@@ -23,17 +23,16 @@
             <li class="nav-item">
                 <div class="dropdown">
                     <div class="nav-link dropdown-toggle" data-toggle="dropdown">
-                     <b>Unit</b> 
+                        <b>Unit</b> 
                     </div>
                     <div class="dropdown-menu dropdown-menu-left bg-danger text-white">
-                      <a class="dropdown-item nav-link" href="UnitEnrollment.html"><b>Unit Enrolment</b></a>
-                      <a class="dropdown-item nav-link" href="UnitDetail.html"><b>Unit Handbook(Detail)</b></a>
-                      <a class="dropdown-item nav-link" href="UnitMagmnt.html"><b>Unit Management</b></a>
+                        <a class="dropdown-item nav-link" href="UnitDetail.html"><b>Unit Detail (Handbook)</b></a>
+                        <a class="dropdown-item nav-link" href="UnitEnrollment.html"><b>Unit Enrolment</b></a>
                     </div>
-                  </div>
+                    </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link " id="MyTimetable_hylink" href="#"><b>MyTimetable</b></a>
+                <a class="nav-link " id="MyTimetable_hylink" href="Timetable.html"><b>MyTimetable</b></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="MasterStaff.html"><b>Staff</b></a>
@@ -43,23 +42,23 @@
             </li>
         </ul>
         <div id="div1">
-            <b><label id="Logged_banner" class="text-light"></label></b>
-            <button  id="lg_btn" type="button" class="btn btn-success" data-toggle="modal" data-target="#log_modal"><b>Log in</b></button>
-            <button  id="lg_out" type="button" class="btn text-light btn-warning" data-toggle="modal" data-target="#logout_modal" ><b>Log out</b></button>
-            <button  id="rg_btn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#roleSelect"><b>Register</b></button>
+            <b><label class="text-light afterLog">Hello(demo)</label></b>
+            <button  id="lg_btn" type="button" class="btn btn-success beforeLog" data-toggle="modal" data-target="#log_modal"><b>Log in</b></button>
+            <button  id="lg_out" type="button" class="btn text-light btn-warning afterLog" data-toggle="modal" data-target="#logout_modal" ><b>Log out</b></button>
+            <button  id="rg_btn" type="button" class="btn btn-primary beforeLog" data-toggle="modal" data-target="#roleSelect"><b>Register</b></button>
         </div>
     </nav>
 
     <!-- Enrolled table  -->
     <div class="container" id="timetable_ct">
-        <h2 class="text-muted">Enrolled Unit</h2>          
+        <h2 class="text-muted" id="timetable_ct_title">Available Units</h2>          
         <table class="table table-hover bg-secondary" id="timetable_tb">
           <thead>
             <tr>
               <th>Unit code</th>
               <th>Lecture time</th>
               <th>Available tutorial time</th>
-              <th> &nbsp;</th>
+              <th id="th4"> &nbsp;</th>
             </tr>
           </thead>
           <tbody id="hUnits">
@@ -69,7 +68,7 @@
       </div>
       <!-- timetable -->
       <div class="container">
-        <h2 class="text-muted">Timetable</h2>
+        <h2 class="text-muted"  id="timetable_title">Timetable</h2>
         <table class="calendar table table-bordered  bg-secondary">
           <thead>
               <tr>
@@ -83,7 +82,7 @@
           </thead>
           <tbody  id="htimetable">
               <tr  id="8AM">
-                  <td>08:00</td>
+                  <td class="timeLine">08:00</td>
                   <td class=" no-events" rowspan="1" ></td>
                   <td class=" no-events" rowspan="1" ></td>
                   <td class=" no-events" rowspan="1" ></td>
@@ -92,7 +91,7 @@
               </tr>
              
               <tr id="9AM">
-                  <td>09:00</td>
+                  <td class="timeLine">09:00</td>
                   <td class=" no-events" rowspan="1" ></td>
                   <td class=" no-events" rowspan="1" ></td>
                   <td class=" no-events" rowspan="1" ></td>
@@ -101,7 +100,7 @@
               </tr>
             
               <tr id="10AM">
-                  <td>10:00</td>
+                  <td class="timeLine">10:00</td>
                   <td class=" no-events" rowspan="1" ></td>
                   <td class=" no-events" rowspan="1" ></td>
                   <td class=" no-events" rowspan="1" ></td>
@@ -110,7 +109,7 @@
               </tr>
 
               <tr>
-                  <td>11:00</td>
+                  <td class="timeLine">11:00</td>
                   <td class=" no-events" rowspan="1" ></td>
                   <td class=" no-events" rowspan="1" ></td>
                   <td class=" no-events" rowspan="1" ></td>
@@ -119,7 +118,7 @@
               </tr>
 
               <tr>
-                  <td>12:00</td>
+                  <td class="timeLine">12:00</td>
                   <td class=" no-events" rowspan="1" ></td>
                   <td class=" no-events" rowspan="1" ></td>
                   <td class=" no-events" rowspan="1" ></td>
@@ -128,7 +127,7 @@
               </tr>
 
               <tr>
-                  <td>13:00</td>
+                  <td class="timeLine">13:00</td>
                   <td class=" no-events" rowspan="1" ></td>
                   <td class=" no-events" rowspan="1" ></td>
                   <td class=" no-events" rowspan="1" ></td>
@@ -137,7 +136,7 @@
               </tr>
 
               <tr>
-                  <td>14:00</td>
+                  <td class="timeLine" >14:00</td>
                   <td class=" no-events" rowspan="1" ></td>
                   <td class=" no-events" rowspan="1" ></td>
                   <td class=" no-events" rowspan="1" ></td>
@@ -146,7 +145,7 @@
               </tr>
             
               <tr>
-                  <td>15:00</td>
+                  <td class="timeLine">15:00</td>
                   <td class=" no-events" rowspan="1" ></td>
                   <td class=" no-events" rowspan="1" ></td>
                   <td class=" no-events" rowspan="1" ></td>
@@ -155,7 +154,7 @@
               </tr>
 
               <tr>
-                  <td>16:00</td>
+                  <td class="timeLine">16:00</td>
                   <td class=" no-events" rowspan="1" ></td>
                   <td class=" no-events" rowspan="1" ></td>
                   <td class=" no-events" rowspan="1" ></td>
@@ -164,7 +163,7 @@
               </tr>
   
               <tr>
-                  <td>17:00</td>
+                  <td class="timeLine">17:00</td>
                   <td class=" no-events" rowspan="1" ></td>
                   <td class=" no-events" rowspan="1" ></td>
                   <td class=" no-events" rowspan="1" ></td>
@@ -183,6 +182,5 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-<!-- <script type="text/javascript" src="JS/global_data.js"></script> -->
 <script type="text/javascript" src="../JS/Timetable.js"></script>
 </html>

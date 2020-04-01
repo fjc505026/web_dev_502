@@ -76,14 +76,15 @@ $(function(){
     );
 });
 
+//  function to handle with enroll and withdraw event
 function btn_act(){
-    $(".en_btn").click(function(){
-        $(this).hide();
+    $("#enrollCfm_btn").click(function(){
+        $(".en_btn").hide();
         $(".wd_btn").show()
     });
 
-    $(".wd_btn").click(function(){
-      $(this).hide();
+    $("#withdrawCfm_btn").click(function(){
+      $(".wd_btn").hide();
       $(".en_btn").show()
     });
 

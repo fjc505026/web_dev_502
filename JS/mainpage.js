@@ -10,9 +10,8 @@ var AccountValid=false;
 $(document).ready(function() {
   //check the account log in for timetable stafflist unitmaster access
   $(".priority").on('click',function () {
-    AccountValid=true;  //for debug
+    //AccountValid=true;  //for debug
     if(AccountValid){ 
-      $("#MyTimetable_hylink").attr("href","html/Timetable.html");
       $("#MasterStaff_hylink").attr("href","html/MasterStaff.html");
       $("#MasterUnit_hylink").attr("href","html/MasterUnits.html");
     }
@@ -29,9 +28,8 @@ $(document).ready(function() {
          alert("log in success");    
          AccountValid=true;
          $("#Logged_banner").text("Hello ("+defaultName+")");
-         $("#lg_btn").hide();
-         $("#rg_btn").hide();
-         $("#lg_out").show();
+         $(".afterLog").show();
+         $(".beforeLog").hide();
     }
     else
         alert("In valid email and password!");
@@ -40,10 +38,8 @@ $(document).ready(function() {
   //for log out use
   $("#lg_outCfm_btn").click(function(){
         AccountValid=false;
-        $("#Logged_banner").text("");
-        $("#lg_btn").show();
-        $("#rg_btn").show();
-        $("#lg_out").hide();
+        $(".afterLog").hide();
+        $(".beforeLog").show();
    });
 
      

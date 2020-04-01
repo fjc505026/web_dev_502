@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-  <head>
+    <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -8,110 +8,147 @@
     <link rel="stylesheet" href="../format/mainpage.css">
     <link rel="stylesheet" href="../format/UnitEnrollment.css">
     <title>Unit Enrolment</title>
-  </head>
+    </head>
 
-<body class="bg-dark">
+    <body class="bg-dark">
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-sm  bg-danger navbar-dark">
-        <a class="navbar-brand" href="../index.html">
-            <img src="../images/logo.png" alt="logo">          
-        </a>
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="../index.html"><b>HOME</b> </a>
-            </li>
-            <li class="nav-item">
-                <div class="dropdown">
-                    <div class="nav-link dropdown-toggle" data-toggle="dropdown">
-                     <b>Unit</b> 
+        <nav class="navbar navbar-expand-sm  bg-danger navbar-dark">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../images/logo.png" alt="logo">          
+            </a>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html"><b>HOME</b> </a>
+                </li>
+                <li class="nav-item">
+                    <div class="dropdown">
+                        <div class="nav-link dropdown-toggle" data-toggle="dropdown">
+                            <b>Unit</b> 
+                        </div>
+                        <div class="dropdown-menu dropdown-menu-left bg-danger text-white">
+                            <a class="dropdown-item nav-link" href="UnitDetail.html"><b>Unit Detail (Handbook)</b></a>
+                            <a class="dropdown-item nav-link" href="UnitEnrollment.html"><b>Unit Enrolment</b></a>
+                        </div>
+                        </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " id="MyTimetable_hylink" href="Timetable.html"><b>MyTimetable</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="MasterStaff.html"><b>Staff</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="MasterUnits.html"><b>UnitsMaster</b></a>
+                </li>
+            </ul>
+            <div id="div1">
+                <b><label id="Logged_banner afterLog" class="text-light"></label></b>
+          <button  id="lg_btn" type="button" class="btn btn-success beforeLog" data-toggle="modal" data-target="#log_modal"><b>Log in</b></button>
+          <button  id="lg_out" type="button" class="btn text-light btn-warning afterLog" data-toggle="modal" data-target="#logout_modal" ><b>Log out</b></button>
+          <button  id="rg_btn" type="button" class="btn btn-primary beforeLog" data-toggle="modal" data-target="#roleSelect"><b>Register</b></button>
+            </div>
+        </nav>
+
+        <div class="row" id="filterGroup">
+            <div class="col-sm-3">
+                <label class="mr-sm-2 text-secondary" for="campus"><b>Filter by campus</b></label>
+                <select class="custom-select mr-sm-2" id="campus">
+                    <option selected value="0">Choose...</option>
+                    <option value="1">Pandora</option>
+                    <option value="2">Rivendell</option>
+                    <option value="3">Neverland</option>
+                </select>
+            </div>
+            <div class="col-sm-3">
+                <label class="mr-sm-2 text-secondary" for="campus"><b>Filter by periods</b></label>
+                <select class="custom-select mr-sm-2" id="studyPeriod">
+                    <option selected value="0">Choose...</option>
+                    <option value="1">Semester 1</option>
+                    <option value="2">Semester 2</option>
+                    <option value="3">Winter School</option>
+                    <option value="4">Spring School</option>
+                </select>
+                </select>
+            </div>
+        </div> 
+
+        <!-- UnitEnrollment table  -->
+        <div class="container" id="UnitEnrol_ct">
+            <h2 class="text-muted">Unit Available</h2>          
+            <table class="table table-hover bg-secondary" id="UnitEnrol_tb">
+                <thead>
+                <tr>
+                    <th>Unit code</th>
+                    <th>Unit coordinator</th>
+                    <th>Lecturer</th>
+                    <th>Description</th>
+                    <th>campus</th>
+                    <th>study periods</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody id="UnitEnrol_body">
+                    <!-- ajax update -->
+                <tr>
+                    <td>KIT001</td>
+                    <td>Doe</td>
+                    <td>john,harry</td>
+                    <td>This unit test html format</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td class="act_btn">
+                        <button class="btn btn-success en_btn"  data-toggle="modal" data-target="#enroll_modal">enroll</button>
+                        <button class="btn btn-danger wd_btn" data-toggle="modal" data-target="#withdra_modal">withdraw</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+         
+        <!-- Modal for enroll-->
+        <div class="modal fade" id="enroll_modal" tabindex="-1" role="dialog" aria-labelledby="enrollModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title text-muted">Enrollment</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
-                    <div class="dropdown-menu dropdown-menu-left bg-danger text-white">
-                      <a class="dropdown-item nav-link" href="UnitEnrollment.html"><b>Unit Enrolment</b></a>
-                      <a class="dropdown-item nav-link" href="UnitDetail.html"><b>Unit Handbook(Detail)</b></a>
-                      <a class="dropdown-item nav-link" href="UnitMagmnt.html"><b>Unit Management</b></a>
+                    <div class="modal-body">
+                        <h3>Are you sure to enroll this unit?</h3>
+                        <div class="modal-footer">
+                            <button type="submit" id="enrollCfm_btn" class="btn btn-success" data-dismiss="modal">Continue to enroll</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Determine later</button>
+                        </div>
                     </div>
-                  </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link " id="MyTimetable_hylink" href="#"><b>MyTimetable</b></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="MasterStaffStaff.html"><b>Staff</b></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="MasterUnits.html"><b>UnitsMaster</b></a>
-            </li>
-        </ul>
-        <div id="div1">
-            <b><label id="Logged_banner" class="text-light"></label></b>
-            <button  id="lg_btn" type="button" class="btn btn-success" data-toggle="modal" data-target="#log_modal"><b>Log in</b></button>
-            <button  id="lg_out" type="button" class="btn text-light btn-warning" data-toggle="modal" data-target="#logout_modal" ><b>Log out</b></button>
-            <button  id="rg_btn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#roleSelect"><b>Register</b></button>
+                </div>
+            </div>
         </div>
-    </nav>
-
-    <div class="row" id="filterGroup">
-        <div class="col-sm-3">
-            <label class="mr-sm-2 text-secondary" for="campus"><b>Filter by campus</b></label>
-            <select class="custom-select mr-sm-2" id="campus">
-                <option selected value="0">Choose...</option>
-                <option value="1">Pandora</option>
-                <option value="2">Rivendell</option>
-                <option value="3">Neverland</option>
-            </select>
+        <!-- Modal for withdraw-->
+        <div class="modal fade" id="withdra_modal" tabindex="-1" role="dialog" aria-labelledby="withdrawModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title text-muted">Withdraw unit</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h3>Are you sure to withdraw this unit?</h3>
+                        <div class="modal-footer">
+                            <button type="submit" id="withdrawCfm_btn" class="btn btn-danger" data-dismiss="modal">Withdraw</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+             </div>
         </div>
-        <div class="col-sm-3">
-            <label class="mr-sm-2 text-secondary" for="campus"><b>Filter by periods</b></label>
-            <select class="custom-select mr-sm-2" id="studyPeriod">
-                <option selected value="0">Choose...</option>
-                <option value="1">Semester 1</option>
-                <option value="2">Semester 2</option>
-                <option value="3">Winter School</option>
-                <option value="4">Spring School</option>
-            </select>
-            </select>
-        </div>
-    </div> 
+    </body>
 
-    <!-- UnitEnrollment table  -->
-    <div class="container" id="UnitEnrol_ct">
-        <h2 class="text-muted">Unit Available</h2>          
-        <table class="table table-hover bg-secondary" id="UnitEnrol_tb">
-          <thead>
-            <tr>
-              <th>Unit code</th>
-              <th>Unit coordinator</th>
-              <th>Lecturer</th>
-              <th>Description</th>
-              <th>campus</th>
-              <th>study periods</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody id="UnitEnrol_body">
-              <!-- ajax update -->
-            <tr>
-                <td>KIT001</td>
-                <td>Doe</td>
-                <td>john,harry</td>
-                <td>This unit test html format</td>
-                <td>...</td>
-                <td>...</td>
-                <td>
-                    <button class="btn btn-danger">
-                        withdraw        
-                    </button>
-                </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    
-
-
-</body>
-
-  <!-- Optional JavaScript -->
+<!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>

@@ -10,7 +10,7 @@
     <title>Unit Details</title>
   </head>
 
-<body class="bg-dark">
+  <body class="bg-dark">
     <!-- Navigation -->
     <nav class="navbar navbar-expand-sm  bg-danger navbar-dark">
       <a class="navbar-brand" href="../index.html">
@@ -23,30 +23,29 @@
           <li class="nav-item">
               <div class="dropdown">
                   <div class="nav-link dropdown-toggle" data-toggle="dropdown">
-                   <b>Unit</b> 
+                      <b>Unit</b> 
                   </div>
                   <div class="dropdown-menu dropdown-menu-left bg-danger text-white">
-                    <a class="dropdown-item nav-link" href="UnitEnrollment.html"><b>Unit Enrolment</b></a>
-                    <a class="dropdown-item nav-link" href="UnitDetail.html"><b>Unit Handbook(Detail)</b></a>
-                    <a class="dropdown-item nav-link" href="UnitMagmnt.html"><b>Unit Management</b></a>
+                      <a class="dropdown-item nav-link" href="UnitDetail.html"><b>Unit Detail (Handbook)</b></a>
+                      <a class="dropdown-item nav-link" href="UnitEnrollment.html"><b>Unit Enrolment</b></a>
                   </div>
-                </div>
+                  </div>
           </li>
           <li class="nav-item">
-              <a class="nav-link " id="MyTimetable_hylink" href="#"><b>MyTimetable</b></a>
+              <a class="nav-link " id="MyTimetable_hylink" href="Timetable.html"><b>MyTimetable</b></a>
           </li>
           <li class="nav-item">
               <a class="nav-link" href="MasterStaff.html"><b>Staff</b></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="MasterUnits.html"><b>UnitsMaster</b></a>
+              <a class="nav-link" href="MasterUnits.html"><b>UnitsMaster</b></a>
           </li>
       </ul>
       <div id="div1">
-          <b><label id="Logged_banner" class="text-light"></label></b>
-          <button  id="lg_btn" type="button" class="btn btn-success" data-toggle="modal" data-target="#log_modal"><b>Log in</b></button>
-          <button  id="lg_out" type="button" class="btn text-light btn-warning" data-toggle="modal" data-target="#logout_modal" ><b>Log out</b></button>
-          <button  id="rg_btn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#roleSelect"><b>Register</b></button>
+        <b><label id="Logged_banner afterLog" class="text-light"></label></b>
+        <button  id="lg_btn" type="button" class="btn btn-success beforeLog" data-toggle="modal" data-target="#log_modal"><b>Log in</b></button>
+        <button  id="lg_out" type="button" class="btn text-light btn-warning afterLog" data-toggle="modal" data-target="#logout_modal" ><b>Log out</b></button>
+        <button  id="rg_btn" type="button" class="btn btn-primary beforeLog" data-toggle="modal" data-target="#roleSelect"><b>Register</b></button>
       </div>
   </nav>
 
@@ -62,52 +61,40 @@
               <th>Description</th>
               <th>Available semester and campus</th>
             </tr>
+            
           </thead>
-          <tbody>
-            <tr>
-              <td>KIT001</td>
-              <td>Doe</td>
-              <td>john,harry</td>
-              <th>Description pattern Description pattern Description pattern </th>
-              <th> <a class="text-dark" href="UnitEnrollment.html">Pandora(S1),Rivendell(Winter School),Neverland(S2)</a></th>
+          
+          <tbody id="Unit_body">
+            <!-- data update by AJAX get request -->
+            <tr class="brief-view">
+                <td>KIT001</td>
+                <td>Doe</td>
+                <td>john,harry</td>
+                <td> retain this for HTML format </td>
+                <td> <a class="text-light" href="UnitEnrollment.html">Pandora(S1),Rivendell(Winter School),Neverland(S2)</a></td>
             </tr>
-            <tr>
-              <td>KIT002</td>
-              <td>Moe</td>
-              <td>mary,pattern</td>
-              <th>Description pattern Description pattern Description pattern </th>
-              <th><a class="text-dark" href="UnitEnrollment.html">Pandora(S1),Rivendell(Winter School),Neverland(S2)</a></th>
+            <tr class="detail-view">
+              <td colspan="2">
+                <b>Lecutre:</b>  Day:Start-END 
+              </td>
+              <td colspan="3">
+                <b>Tutorial:</b> Tut1 Day:Start-END /Tut2: Day:Start-END 
+             </td>
             </tr>
-            <tr>
-              <td>KIT003</td>
-              <td>Dooley</td>
-              <td>pattern,pattern</td>
-              <th>Description pattern Description pattern Description pattern </th>
-              <th><a class="text-dark" href="UnitEnrollment.html">Pandora(S1),Rivendell(Winter School),Neverland(S2)</a></th>
-            </tr>
-            <tr>
-                <td>KIT003</td>
-                <td>Dooley</td>
-                <td>pattern,pattern</td>
-                <th>Description pattern Description pattern Description pattern </th>
-                <th><a class="text-dark" href="UnitEnrollment.html">Pandora(S1),Rivendell(Winter School),Neverland(S2)</a></th>
-            </tr>
-            <tr>
-            <td>KIT003</td>
-            <td>Dooley</td>
-            <td>pattern,pattern</td>
-            <th>Description pattern Description pattern Description pattern </th>
-            <th><a class="text-dark" href="UnitEnrollment.html">Pandora(S1),Rivendell(Winter School),Neverland(S2)</a></th>
+            <tr class="detail-view">
+              <td colspan="5">
+                <p><b>Description(Detail):</b> This is the detail Description content of this unit!!This is the detail Description content of this unit!!This is the detail Description content of this unit!!This is the detail Description content of this unit!!</p>
+             </td>
             </tr>
           </tbody>
         </table>
       </div>
-</body>
+  </body>
 
   <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="#"></script>
+<script type="text/javascript" src="../JS/UnitDetail.js"></script>
 </html>

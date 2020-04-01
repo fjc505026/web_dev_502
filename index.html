@@ -24,14 +24,13 @@
                             <b>Unit</b> 
                         </div>
                         <div class="dropdown-menu gdropdown-menu-left bg-danger text-white">
-                            <a class="dropdown-item nav-link" href="html/UnitEnrollment.html"><b>Unit Enrolment</b></a>
-                            <a class="dropdown-item nav-link" href="html/UnitDetail.html"><b>Unit Handbook(Detail)</b></a>
-                            <a class="dropdown-item nav-link" href="html/UnitMagmnt.html"><b>Unit Management</b></a>
+                            <a class="dropdown-item nav-link" href="html/UnitDetail.html"><b>Unit Detail (Handbook)</b></a>
+                            <a class="dropdown-item nav-link" href="html/UnitEnrollment.html"><b>Unit Enrolment</b></a>           
                         </div>
                         </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link priority" id="MyTimetable_hylink" href="#"><b>MyTimetable</b></a>
+                    <a class="nav-link" id="MyTimetable_hylink" href="html/Timetable.html"><b>MyTimetable</b></a>
                 </li>
                 <li class="nav-item priority">
                     <a class="nav-link" id="MasterStaff_hylink" href="#"><b>Staff</b></a>
@@ -41,10 +40,10 @@
                 </li>
             </ul>
             <div id="div1">
-                <b><label id="Logged_banner" class="text-light"></label></b>
-                <button  id="lg_btn" type="button" class="btn btn-success" data-toggle="modal" data-target="#log_modal"><b>Log in</b></button>
-                <button  id="lg_out" type="button" class="btn text-light btn-warning" data-toggle="modal" data-target="#logout_modal" ><b>Log out</b></button>
-                <button  id="rg_btn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#roleSelect"><b>Register</b></button>
+                <b><label id="Logged_banner" class="text-light afterLog"></label></b>
+                <button  id="lg_btn" type="button" class="btn btn-success beforeLog" data-toggle="modal" data-target="#log_modal"><b>Log in</b></button>
+                <button  id="lg_out" type="button" class="btn text-light btn-warning afterLog" data-toggle="modal" data-target="#logout_modal" ><b>Log out</b></button>
+                <button  id="rg_btn" type="button" class="btn btn-primary beforeLog" data-toggle="modal" data-target="#roleSelect"><b>Register</b></button>
             </div>
         </nav>
 
@@ -72,9 +71,10 @@
         </div>
         <!-- banner3 -->
         <div class="jumbotron" id="big-banner2">
-                <div class="text-light" id="cpright">@Copyright 2020 geunis</div>
+                <span></span>
+                <div class="text-dark " id="cpright">@Copyright 2020 Jingchen Fan</div>
         </div>
-
+       
         <!-- Modal for Register-->
         <div class="modal fade" id="roleSelect" tabindex="-1" role="dialog" aria-labelledby="logInModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
