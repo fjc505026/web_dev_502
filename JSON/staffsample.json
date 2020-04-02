@@ -8,7 +8,6 @@
       "tutorial":{
       "tutorial1": "pattern",
       "tutorial2": "pattern"
-
       }
   },
   {
@@ -20,7 +19,6 @@
     "tutorial":{
       "tutorial1": "pattern",
       "tutorial2": "pattern"
-
     }
   },
   {
@@ -32,7 +30,6 @@
     "tutorial":{
       "tutorial1": "pattern",
       "tutorial2": "pattern"
-
     }
   },
   {
@@ -44,12 +41,6 @@
     "tutorial":{
       "tutorial1": "pattern",
       "tutorial2": "pattern"
-
     }
   }
-
-
-
-
-
 ]

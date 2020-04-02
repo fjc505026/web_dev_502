@@ -22,7 +22,7 @@ function validateFunc() {
         var sample="111";
 
 
-        $.ajax({
+        $.ajax({           //can not post data, not access right to git hub? access to local file also fail.
         type:'post',
         url:'../JSON/user.json',//https://raw.githubusercontent.com/fjc505026/web_dev_502/master/JSON/user.JSON'
         data:  userinfo,

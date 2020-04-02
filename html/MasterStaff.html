@@ -42,7 +42,7 @@
           </li>
       </ul>
       <div id="div1">
-          <b><label id="Logged_banner afterLog" class="text-light"></label></b>
+          <b><label id="Logged_banner" class="text-light afterLog"></label></b>
           <button  id="lg_btn" type="button" class="btn btn-success beforeLog" data-toggle="modal" data-target="#log_modal"><b>Log in</b></button>
           <button  id="lg_out" type="button" class="btn text-light btn-warning afterLog" data-toggle="modal" data-target="#logout_modal" ><b>Log out</b></button>
           <button  id="rg_btn" type="button" class="btn btn-primary beforeLog" data-toggle="modal" data-target="#roleSelect"><b>Register</b></button>
@@ -70,11 +70,11 @@
               <td>This is for</td>
               <td>HTML fomat  </td>
               <td>infomation demo</td>
-              <td>kit501(Lecture),kit606(Tutorial)</td>
+              <td>kit501(UC),kit606(Lecture)</td>
               <td>
                   <div class="row">
                       <button class="btn btn-warning btn_alloc" data-toggle="modal" data-target="#alloc_modal">Allocate</button>
-                      <button class="btn btn-danger" data-toggle="modal" data-target="#remv_modal">Remove</button>
+                      <button class="btn btn-danger has_techUnit" data-toggle="modal" data-target="#remv_modal">Remove</button>
                   </div>     
               </td>
             </tr>
@@ -136,14 +136,17 @@
                     </form>
                     <div class="row">
                       <p class="col-sm"><b>Category</b></p>
-                      <label class="form-check form-check-label col-sm">
-                        <input type="radio" class="form-check-input" name="lecORtut">Lecture
+                      <label class="form-check form-check-label col-sm DConly">
+                        <input type="radio" class="form-check-input DConly" name="roleSelect">UC
                       </label>
                       <label class="form-check form-check-label col-sm">
-                        <input type="radio" class="form-check-input" name="lecORtut">Tutorial
+                        <input type="radio" class="form-check-input" name="roleSelect">Lecture
+                      </label>
+                      <label class="form-check form-check-label col-sm">
+                        <input type="radio" class="form-check-input" name="roleSelect">Tutorial
                       </label>
                     </div>
-                    <label for="timeAlloc"><b>Select time slot:</b></label>
+                    <label for="timeAlloc"><b>Select time slot</b> (Optional):</label>
                     <select class="custom-select " id="timeAlloc">
                       <option selected>Choose Time_slot</option>
                       <option value="1">Mon 9:00-11:00</option>
@@ -186,14 +189,14 @@
                             <tbody>
                               <tr>
                                 <td> <input type="checkbox"> </td>
-                                <td>Lecture </td>
+                                <td>Unit Coordinator </td>
                                 <td>kit501 </td>
                                 <td>Mon 9:00-11:00 </td>
                                 <td>Pandora </td>
                               </tr>
                               <tr>
                                 <td> <input type="checkbox"> </td>
-                                <td>Tutorial </td>
+                                <td>Lecture </td>
                                 <td>kit606 </td>
                                 <td>Fri 13:00-14:00 </td>
                                 <td>Pandora </td>
@@ -207,6 +210,28 @@
                 <button type="submit" id="SignIn_btn" class="btn btn-danger" data-dismiss="modal">Comfirm</button>
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal for log in-->
+      <div class="modal fade" id="log_modal" tabindex="-1" role="dialog" aria-labelledby="RegModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title text-muted">chose your role</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h3>Are you UC or DC?</h3>
+                    <div class="modal-footer">
+                        <button type="submit" id="UC_btn" class="btn btn-success" data-dismiss="modal">UC</button>
+                        <button type="button" id="DC_btn" class="btn btn-warning" data-dismiss="modal">DC</button>
+                    </div>
+                </div>
+            </div>
           </div>
         </div>
       </div>

@@ -5,9 +5,9 @@
   padding-top: 15%;
   padding-bottom: 15%;
   background-repeat: none;
-  /* widows: 100px; */
-  width: auto;
-  height:1080px;
+  width: 100%;
+  height:100%;
+  background-size:cover;
   margin: auto;
   text-align: center;
 }
@@ -15,8 +15,9 @@
 #big-banner1 {
   color: white;
   background-image: url(../images/bg2.jpg); 
-  /* widows: 100px; */
-  height:1080px;
+  width: 100%;
+  height:1024px;
+  background-size:cover;
   margin: auto;
   width: auto;
   background-repeat: none;
@@ -24,8 +25,9 @@
 }
 #big-banner2 {
   color: white;
-  /* widows: 100px; */
-  height:1080px;
+  width: 100%;
+  height:1024px;
+  background-size:cover;
   margin: auto;
   width: auto;
   background-image: url(../images/bg1.jpg);
@@ -67,7 +69,6 @@ nav img{
   position: relative;  
 }
   
-
 .options button{
   width: 150px;
   height: 40px;
@@ -82,7 +83,6 @@ nav img{
     float:right;
     cursor: pointer;
 }
-
 
 #robot{
   width: 40px;

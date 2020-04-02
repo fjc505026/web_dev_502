@@ -1,8 +1,18 @@
 #tut_col{
-    width: 10%;
+    width: 15%;
 }
 
-.btn_remv{
-   display: none;
+.has_techUnit{
+    margin-left: 1%;
+}
 
+.no_techUnit{
+    margin-left: 1%;
+    display:none;
+
+}
+
+#Staff_ct{
+    padding-left: 5%;
+    padding-right: 5%;
 }

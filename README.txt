@@ -1,12 +1,12 @@
 
-/************************************AUTHOR STATEMENT********************************************/
-    I declare that all material in this assignment is my own work except where there is clear
-    acknowledgement or reference to the work of others. I am aware that my assignment may be
-    submitted to plagiarism detection software, and might be retained on its database. I have read
-    and complied with the University statement on Plagiarism and Academic Integrity on the
-    University website at www.utas.edu.au/plagiarism.
-    I will keep a copy of this assignment until results have been finalised.
-/*********************************************************************************************/
+/******************************************AUTHOR STATEMENT************************************************/
+        I declare that all material in this assignment is my own work except where there is clear
+        acknowledgement or reference to the work of others. I am aware that my assignment may be
+        submitted to plagiarism detection software, and might be retained on its database. I have read
+        and complied with the University statement on Plagiarism and Academic Integrity on the
+        University website at www.utas.edu.au/plagiarism.
+        I will keep a copy of this assignment until results have been finalised.
+/*********************************************************************************************************/
 
 1.Gerneral framework
     All html, javascript, JSON (test data), format(CSS), images files are located in the responding filefolders except Mainpage(index.html) in the root filefolder. 
@@ -21,18 +21,15 @@
     From other pages  to access to Staff, UnitsMaster pages do not required check validation (for easy to display the functionalities). But some pages show different
     infomation before or after log in.(this can be checked through the log in button)
 
-
 3.Pages' features:
-    registration page        : access from Registr button, two different views base on student or staff.
+    registration page        : access from Register button, two different views base on student or staff.
     Unit Detail page         : click on each row will show detial, the light text(Available semester and campus) link to unit enrollment.
     Unit Enrolment page      : enroll and withdraw button only work for first row (waiting for change when has database connect), the two filters could work fine independently.
-    Individual Timetable Page: not log in, show all the availabe units.
-                               log in , show the unit already enrolled, you can allocate tutorials from allocate button.
+    Individual Timetable Page: not log in, show all the availabe units and tutorials time.
+                               if log in , show the units already enrolled, you can allocate tutorials from allocate button.
     Tutorial allocation page : it can be only accessed after logging in from the allocate button in Timetable page .   
-    MasterpageofStaff        : 
-    Masterpageofunits        :                          
-
-
+    MasterpageofStaff        : default view is DC view, there are pop up modals when allocate or remove the teching units, log in can change the roles, UC can only allocate lecturers and tutors
+    Masterpageofunits        : edit button can provide a modal to edit unit details.                         
 
 4.References :
 The timetable is refer to template http://jsfiddle.net/dvirazulay/Lhe7C/ , html and CSS parts.

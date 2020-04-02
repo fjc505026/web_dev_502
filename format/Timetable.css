@@ -1,5 +1,4 @@
 
-
 table.calendar > thead > tr > th {
     text-align: center;
 }
@@ -37,9 +36,7 @@ table.calendar > tbody > tr > td.has-events > div:first-child {
 table.calendar > tbody > tr > td.has-events > div.practice {
     opacity: 0.7;
 }
-table.calendar > tbody > tr > td.conflicts > div > span.title {
-     /* color: red;  */
-}
+
 table.calendar > tbody > tr > td.max-conflicts > div {
     background-color: red;
     color: white;

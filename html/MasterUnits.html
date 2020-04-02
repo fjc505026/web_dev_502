@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"></head>
     <link rel="stylesheet" href="../format/mainpage.css">
-    <link rel="stylesheet" href="../format/UnitDetail.css">
+    <link rel="stylesheet" href="../format/MasterUnits.css">
     <title>Unit Details</title>
   </head>
 
@@ -49,9 +49,9 @@
       </div>
     </nav>
 
-    <!-- UnitDetail table  -->
+    <!-- Master unit table  -->
     <div class="container" id="Unit_ct">
-        <h2 class="text-muted">Unit Details</h2>          
+        <h2 class="text-muted">Master page of Unit Details</h2>          
         <table class="table table-hover bg-secondary" id="Unit_tb">
           <thead>
             <tr>
@@ -60,6 +60,7 @@
               <th>lecturer</th>
               <th>Description</th>
               <th>Available semester and campus</th>
+              <th id="tableHeader5">&nbsp;</th>
             </tr>
           </thead>
           <tbody>
@@ -67,39 +68,171 @@
               <td>KIT001</td>
               <td>Doe</td>
               <td>john,harry</td>
-              <th>Description pattern Description pattern Description pattern </th>
-              <th> <a class="text-dark" href="UnitEnrollment.html">Pandora(S1),Rivendell(Winter School),Neverland(S2)</a></th>
+              <td>Description pattern Description pattern Description pattern </td>
+              <td> <a class="text-dark" href="#">Pandora(S1),Rivendell(Winter School),Neverland(S2)</a></td>
+              <td>
+                <div class="row">
+                  <button class="btn btn-warning text-light"  data-toggle="modal" data-target="#editUnit_modal">edit</button>
+                  <button class="btn btn-danger text-light" data-toggle="modal" data-target="#delUnit_modal">delete</button>
+                </div>
+              </td>
             </tr>
             <tr>
               <td>KIT002</td>
               <td>Moe</td>
               <td>mary,pattern</td>
-              <th>Description pattern Description pattern Description pattern </th>
-              <th><a class="text-dark" href="UnitEnrollment.html">Pandora(S1),Rivendell(Winter School),Neverland(S2)</a></th>
+              <td>Description pattern Description pattern Description pattern </td>
+              <td><a class="text-dark" href="#">Pandora(S1),Rivendell(Winter School),Neverland(S2)</a></td>
+              <td>
+                <div class="row">
+                  <button class="btn btn-warning text-light" data-toggle="modal" data-target="#editUnit_modal">edit</button>
+                  <button class="btn btn-danger text-light"  data-toggle="modal" data-target="#delUnit_modal">delete</button>
+                </div>
+              </td>
             </tr>
             <tr>
               <td>KIT003</td>
               <td>Dooley</td>
               <td>pattern,pattern</td>
-              <th>Description pattern Description pattern Description pattern </th>
-              <th><a class="text-dark" href="UnitEnrollment.html">Pandora(S1),Rivendell(Winter School),Neverland(S2)</a></th>
+              <td>Description pattern Description pattern Description pattern </td>
+              <td><a class="text-dark" href="#">Pandora(S1),Rivendell(Winter School),Neverland(S2)</a></td>
+              <td>
+                <div class="row">
+                  <button class="btn btn-warning text-light" data-toggle="modal" data-target="#editUnit_modal">edit</button>
+                  <button class="btn btn-danger text-light"  data-toggle="modal" data-target="#delUnit_modal">delete</button>
+                </div>
+              </td>
             </tr>
             <tr>
                 <td>KIT003</td>
                 <td>Dooley</td>
                 <td>pattern,pattern</td>
-                <th>Description pattern Description pattern Description pattern </th>
-                <th><a class="text-dark" href="UnitEnrollment.html">Pandora(S1),Rivendell(Winter School),Neverland(S2)</a></th>
+                <td>Description pattern Description pattern Description pattern </td>
+                <td><a class="text-dark" href="#">Pandora(S1),Rivendell(Winter School),Neverland(S2)</a></td>
+                <td>
+                  <div class="row">
+                    <button class="btn btn-warning text-light" data-toggle="modal" data-target="#editUnit_modal">edit</button>
+                    <button class="btn btn-danger text-light"  data-toggle="modal" data-target="#delUnit_modal">delete</button>
+                  </div>
+                </td>
             </tr>
             <tr>
-            <td>KIT003</td>
-            <td>Dooley</td>
-            <td>pattern,pattern</td>
-            <th>Description pattern Description pattern Description pattern </th>
-            <th><a class="text-dark" href="UnitEnrollment.html">Pandora(S1),Rivendell(Winter School),Neverland(S2)</a></th>
+              <td>KIT003</td>
+              <td>Dooley</td>
+              <td>pattern,pattern</td>
+              <td>Description pattern Description pattern Description pattern </td>
+              <td><a class="text-dark" href="#">Pandora(S1),Rivendell(Winter School),Neverland(S2)</a></td>
+              <td>
+                <div class="row">
+                  <button class="btn btn-warning text-light"  data-toggle="modal" data-target="#editUnit_modal">edit</button>
+                  <button class="btn btn-danger text-light"  data-toggle="modal" data-target="#delUnit_modal">delete</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="6"> <button class="btn btn-success text-light" id="new_unit"  data-toggle="modal" data-target="#editUnit_modal">new unit</button></td>
             </tr>
           </tbody>
         </table>
+      </div>
+       <!-- Modal for Unit edit-->
+       <div class="modal fade" id="editUnit_modal" tabindex="-1" role="dialog" aria-labelledby="editUnitModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title text-muted">Unit Details</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form name="UnitAlloc_form" action=""  onsubmit="">
+                        <div class="form-group">
+                          <table  class="table secondary">
+                            <thead>
+                              <tr>
+                                <th><label for="UnitCode">UnitCode: </label></th>
+                                <th><label for="campus">campus: </label></th>
+                                <th><label for="studyPeriod">Semester: </label></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>
+                                    <input type="text" readonly class="form-control-plaintext border"placeholder="kitxxx">
+                                </td>
+                                <td>
+                                  <select class="custom-select " id="campus">
+                                    <option selected>Choose campus</option>
+                                    <option value="1">Pandora</option>
+                                    <option value="2">Rivendell</option>
+                                    <option value="3">Neverland</option>
+                                  </select>
+                                </td>
+                                <td>
+                                  <select class="custom-select " id="studyPeriod">
+                                    <option selected>Choose Semester</option>
+                                    <option value="1">Semester 1</option>
+                                    <option value="2">Semester 2</option>
+                                    <option value="3">Winter School</option>
+                                    <option value="3">Spring School</option>
+                                  </select>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                    </form>
+                    <div class="row">
+                      <label class="form-check form-check-label col-sm-5"><b>Unit Coordinator:</b></label>
+                      <select class="custom-select col-sm-6" id="UC_value">
+                          <option selected>Choose UC</option>
+                          <option value="1">Jack Smith</option>
+                          <option value="2">Tom Cruise</option>
+                          <option value="3">Shelly White</option>
+                          <option value="3">David Cook</option>
+                      </select>
+                    </div>
+                    <div class="row">
+                      <label class="form-check form-check-label col-sm-5 "><b>Lecturer:</b></label>
+                      <select class="custom-select col-sm-6 " id="Lecturer_value">
+                          <option selected>Choose Lecturer</option>
+                          <option value="1">Jack Smith</option>
+                          <option value="2">Tom Cruise</option>
+                          <option value="3">Shelly White</option>
+                          <option value="3">David Cook</option>
+                      </select>
+                    </div>
+                    <br>
+                    <label class=""><b>Description:</b></label>
+                    <textarea class="form-control" rows="5" id="desContent" placeholder="description content..."></textarea>
+               </div>
+               <div class="modal-footer">
+                <button type="submit" id="cfm_btn" class="btn btn-success" data-dismiss="modal">Comfirm</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+               </div>
+          </div>
+        </div>
+      </div>
+       <!-- Modal for delete Unit_modal-->
+       <div class="modal fade" id="delUnit_modal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+         <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title text-muted">Log Out</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h3>Are you sure to  Delete?</h3>
+                    <div class="modal-footer">
+                        <button type="submit" id="deleteCfm_btn" class="btn btn-danger" data-dismiss="modal">Delete</button>
+                        <button type="button" class="btn  btn-success" data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+         </div>
       </div>
 </body>
 
@@ -108,5 +241,5 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="#"></script>
+<script type="text/javascript" src="../KS/MasterUnits.js"></script>
 </html>
